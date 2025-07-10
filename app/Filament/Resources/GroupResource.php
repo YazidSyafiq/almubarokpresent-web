@@ -42,9 +42,11 @@ class GroupResource extends Resource
                             ->relationship('location', 'name')
                             ->required(),
                         Forms\Components\TimePicker::make('start_time')
+                            ->seconds(false)
                             ->label('Waktu Masuk')
                             ->required(),
                         Forms\Components\TimePicker::make('end_time')
+                            ->seconds(false)
                             ->label('Waktu Pulang')
                             ->required(),
                     ]),
