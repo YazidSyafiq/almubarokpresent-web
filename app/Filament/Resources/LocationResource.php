@@ -13,6 +13,7 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Humaidem\FilamentMapPicker\Fields\OSMMap;
+use Filament\Forms\Components\Textarea;
 
 class LocationResource extends Resource
 {
@@ -42,7 +43,7 @@ class LocationResource extends Resource
                             ->required()
                             ->preload()
                             ->searchable(),
-                        Forms\Components\TextArea::make('address')
+                        TextArea::make('address')
                             ->label('Alamat')
                             ->required()
                             ->columnSpanFull()
