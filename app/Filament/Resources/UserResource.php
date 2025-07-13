@@ -117,12 +117,11 @@ class UserResource extends Resource
                     ->searchable()
                     ->hidden(fn () => !Auth::user()->hasRole('Super Admin')),
                 Tables\Columns\TextColumn::make('group.name')
-                    ->numeric()
-                    ->sortable(),
+                    ->label('Kelas')
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('group.location.office.name')
                     ->label('Lembaga')
-                    ->numeric()
-                    ->sortable(),
+                    ->searchable(),
             ])
             ->filters([
                 //
